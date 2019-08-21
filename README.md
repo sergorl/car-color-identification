@@ -31,7 +31,7 @@ It helps to detect wrong labels on the image.
 2. Some annotations are distorted: bounding boxes of not cars are labeled as cars,
 for example: images `vlcsnap-2019-08-07-22h56m06s489.png` and `vlcsnap-2019-08-07-23h09m17s466.png`
 contain bad annotations. To check this just run script `image_checker.py`.
-3. Version of python packages above don't allow me to save neural network to use it again.
+3. Versions of python packages above don't allow me to save neural network to use it again.
 Apparently saving functions from `model.save()` and `ModelCheckpoint()` don't work.
 See many related issues here:
     - https://github.com/alexander-rakhlin/CNN-for-Sentence-Classification-in-Keras/issues/13
