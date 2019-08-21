@@ -5,10 +5,9 @@ It is implemented with using `python 3.7`.
 
 
 ### Python scripts
-1. `dataset_builder.py` parse  XML annotations and creates images in specific dirs
+1. `dataset_builder.py` parses XML annotations and creates images in specific dirs
 according `ImageDataGenerator` and `trainDataGen.flow_from_directory(...)`.
-More precisely, it cuts off sub images according bounding boxes from XML annotations
- and puts them in dirs, matching to few colors.  
+More precisely, it cuts off sub images according bounding boxes from XML annotations and puts them in dirs, matching to few colors.  
 2. `color_net.py` contains the _CNN_ architecture and the main functions to train net and predict on images.
 3. `rest_net.py` trains net ant test it making videos from original images and predicted labels.
 4. `image_checker.py` is intended for checking annotations - is it bad or good?
