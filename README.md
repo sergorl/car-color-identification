@@ -36,6 +36,7 @@ Apparently saving functions from `model.save()` and `ModelCheckpoint()` don't wo
 See many related issues here:
     - https://github.com/alexander-rakhlin/CNN-for-Sentence-Classification-in-Keras/issues/13
     - https://github.com/keras-team/keras/issues/4904
+
 So, to see how net works use script `test_net.py`: it trains the net and then test it,
 making videos with predicted colors on bounding boxes.
     
