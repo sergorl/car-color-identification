@@ -23,8 +23,8 @@ It helps to detect wrong labels on the image.
 
 
 ### Data sets
-1. `109 Коридор мойки.zip`
-2. `102 Въезд из мойки в ремзону.zip`
+1. [109 Коридор мойки.zip](https://yadi.sk/mail?hash=YdU%2BJTHTvy6pRTd1yuITxX%2F%2F8zbXc1VUYDGhb3vFgeJ%2F0WaLgRN9XcAe6coBBrjH%2FCH%2B%2BsnE5duAiqM%2FEjDILQ%3D%3D)
+2. [102 Въезд из мойки в ремзону.zip](https://yadi.sk/mail?hash=YdU%2BJTHTvy6pRTd1yuITxWFlkTYv1eIbtCgKVrcXTSc3CqmxVkT1t%2FTn7rM%2FR%2BRMEkI0e0it%2FP53JjBKdrjFug%3D%3D)
 
 
 ### Problems
