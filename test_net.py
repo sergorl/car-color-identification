@@ -91,22 +91,24 @@ if __name__ == '__main__':
 
     # Train net
     net = CarColorNet(numClasses=6)
-    net.train(pathToTrainSet='/home/sergorl/cars/train',
-              pathToValidSet='/home/sergorl/cars/valid',
-              pathToSaveModel='/home/sergorl/cars/car_color_net.h5',
-              pathToSaveWeights='/home/sergorl/cars/color_weights.hdf5',
-              pathToSaveClassIndexes='/home/sergorl/cars/class_index.npy')
+    net.classes = np.load('/home/sergorl/cars/class_index.npy').item()
+    net.loadWeights('/home/sergorl/cars/color_weights.hdf5')
+    # net.train(pathToTrainSet='/home/sergorl/cars/train',
+    #           pathToValidSet='/home/sergorl/cars/valid',
+    #           pathToSaveModel='/home/sergorl/cars/car_color_net.h5',
+    #           pathToSaveWeights='/home/sergorl/cars/color_weights.hdf5',
+    #           pathToSaveClassIndexes='/home/sergorl/cars/class_index.npy')
 
     # Manual validation on images from pathToValidSet
-    # testNetOnImages(net, pathToDirWithDatasetsOfImages='/home/sergorl/cars/valid')
+    testNetOnImages(net, pathToDirWithDatasetsOfImages='/home/sergorl/cars/valid')
 
     # Manual validation on images with making video from original images
-    testNetAndCreateVideo(net,
-                          pathDirWithOriginalImages='/home/sergorl/cars/dataset1/images',
-                          pathToImageBoxes='/home/sergorl/cars/car_boxes_1.npy',
-                          pathToSaveVideo='/home/sergorl/cars/cars1.mp4')
-
-    testNetAndCreateVideo(net,
-                          pathDirWithOriginalImages='/home/sergorl/cars/dataset2/images',
-                          pathToImageBoxes='/home/sergorl/cars/car_boxes_2.npy',
-                          pathToSaveVideo='/home/sergorl/cars/cars2.mp4')
+    # testNetAndCreateVideo(net,
+    #                       pathDirWithOriginalImages='/home/sergorl/cars/dataset1/images',
+    #                       pathToImageBoxes='/home/sergorl/cars/car_boxes_1.npy',
+    #                       pathToSaveVideo='/home/sergorl/cars/cars1.mp4')
+    #
+    # testNetAndCreateVideo(net,
+    #                       pathDirWithOriginalImages='/home/sergorl/cars/dataset2/images',
+    #                       pathToImageBoxes='/home/sergorl/cars/car_boxes_2.npy',
+    #                       pathToSaveVideo='/home/sergorl/cars/cars2.mp4')
