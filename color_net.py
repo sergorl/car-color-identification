@@ -184,6 +184,9 @@ class CarColorNet:
         print('============================ Saving is here ============================')
         self.model.save(pathToSaveModel)
 
+    def loadWeights(self, pathToWeights):
+        self.model.load_weights(pathToWeights)
+
     @staticmethod
     def load(pathToModel, pathToClassIndexes):
 
