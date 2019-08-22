@@ -9,7 +9,8 @@ It is implemented with using `python 3.7`.
 according `ImageDataGenerator` and `trainDataGen.flow_from_directory(...)`.
 More precisely, it cuts off sub images according bounding boxes from XML annotations and puts them in dirs, matching to few colors.  
 2. `color_net.py` contains the _CNN_ architecture and the main functions to train net and predict on images.
-3. `test_net.py` trains net ant test it making videos from original images and predicted labels.
+3. `test_net.py` loads weights `color_weights.hdf5`from [this](https://drive.google.com/open?id=1mDB-DTbVCLuZfBN6cuS7-HxKRFHSJf_Y) 
+(or trains net) ant tests it making videos from original images and predicted labels.
 4. `image_checker.py` is intended for checking annotations - is it bad or good.
 It helps to detect wrong labels on the image. 
 
