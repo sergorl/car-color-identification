@@ -73,7 +73,7 @@ class CarColorNet:
         # ------------------------------------ TOP BOTTOM ------------------------------------
         # first bottom convolution layer
         bottom_conv1 = Convolution2D(filters=48, kernel_size=(11, 11), strides=(4, 4),
-                                     input_shape=(224, 224, 3), activation='relu')(input_image)
+                                     input_shape=(self.imageWidth, self.imageHeight, 3), activation='relu')(input_image)
         bottom_conv1 = BatchNormalization()(bottom_conv1)
         bottom_conv1 = MaxPooling2D(pool_size=(3, 3), strides=(2, 2))(bottom_conv1)
 
@@ -141,8 +141,8 @@ class CarColorNet:
               pathToSaveWeights,
               pathToSaveClassIndexes,
               epochs=10,
-              batchSize=32,
-              stepsPerEpoch=200,
+              batchSize=64,
+              stepsPerEpoch=100,
               validationSteps=1000):
 
         keras.backend.get_session().run(tf.global_variables_initializer())
@@ -233,5 +233,5 @@ if __name__ == '__main__':
     net.train(pathToTrainSet='/home/sergorl/cars/train',
               pathToValidSet= '/home/sergorl/cars/valid',
               pathToSaveModel='/home/sergorl/cars/car_color_net.h5',
-              pathToSaveWeights='/home/sergorl/cars/color_weights.hdf5',
+              pathToSaveWeights='/home/sergorl/cars/color_weights2.hdf5',
               pathToSaveClassIndexes='/home/sergorl/cars/class_index.npy')
